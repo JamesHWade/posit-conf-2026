@@ -8,12 +8,17 @@ The argument: agents do not need the largest ecosystem. They need a coherent one
 
 - [`index.qmd`](index.qmd) is the source, including speaker notes. Technical notes and sources for each slide sit in HTML comments beside it.
 - [`styles.scss`](styles.scss) holds the Reveal.js theme and the slide animations.
-- [`index.html`](index.html) is the rendered presentation. Open it in a browser and press `S` for the speaker view.
 
-Render with [Quarto](https://quarto.org):
+Render with [Quarto](https://quarto.org), then open `index.html` and press `S` for the speaker view:
 
 ```sh
 quarto render index.qmd
+```
+
+The published copy is built from the same source and pushed to the `gh-pages` branch:
+
+```sh
+quarto publish gh-pages index.qmd
 ```
 
 ## The demo
@@ -25,7 +30,7 @@ The Rill slides are redrawn in HTML at slide scale so they project legibly. The 
 ## Supporting material
 
 - [`notes/accepted-submission.md`](notes/accepted-submission.md) is the accepted abstract.
-- [`notes/shinychat-ode.md`](notes/shinychat-ode.md) covers the shinychat section in more depth, with the development-source features it inspects. [`shinychat-ode.html`](shinychat-ode.html) is that section rendered on its own.
+- [`notes/shinychat-ode.md`](notes/shinychat-ode.md) covers the shinychat section in more depth, with the development-source features it inspects.
 
 ## Artwork
 

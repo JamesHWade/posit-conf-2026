@@ -10,5 +10,10 @@ notes/talk-outline.md
 
 .claude/
 
+# Rendered output. Published to the gh-pages branch with `quarto publish gh-pages index.qmd`.
+index.html
+index_files/
+shinychat-ode.html
+
 # Presentation PDF fallback, regenerated from index.html on demand
 index-backup.pdf
