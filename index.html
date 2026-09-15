@@ -897,22 +897,22 @@ Deputy gives the agent a job to do
 </h3>
 <p><img class="example-hex" src="assets/hex/deputy.png" alt="Deputy hex sticker"></p>
 </div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a>agent <span class="ot">&lt;-</span> Agent<span class="sc">$</span><span class="fu">new</span>(</span>
-<span id="cb4-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">chat =</span> chat,</span>
-<span id="cb4-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">tools =</span> <span class="fu">list</span>(read_article),</span>
-<span id="cb4-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">permissions =</span> <span class="fu">Permissions</span>(</span>
-<span id="cb4-5"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">mode =</span> <span class="st">"readonly"</span>, <span class="at">tool_allowlist =</span> <span class="st">"read_article"</span></span>
-<span id="cb4-6"><a href="" aria-hidden="true" tabindex="-1"></a>  ),</span>
-<span id="cb4-7"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">usage_limits =</span> <span class="fu">UsageLimits</span>(<span class="at">max_requests =</span> <span class="dv">6</span>)</span>
-<span id="cb4-8"><a href="" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-9"><a href="" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> agent<span class="sc">$</span><span class="fu">run_sync</span>(question)</span></code></pre></div>
+<div class="sourceCode" id="cb4" data-code-line-numbers="|4-7|9"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>agent <span class="ot">&lt;-</span> Agent<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb4-2"><a href=""></a>  <span class="at">chat =</span> chat,</span>
+<span id="cb4-3"><a href=""></a>  <span class="at">tools =</span> <span class="fu">list</span>(read_article),</span>
+<span id="cb4-4"><a href=""></a>  <span class="at">permissions =</span> <span class="fu">Permissions</span>(</span>
+<span id="cb4-5"><a href=""></a>    <span class="at">mode =</span> <span class="st">"readonly"</span>, <span class="at">tool_allowlist =</span> <span class="st">"read_article"</span></span>
+<span id="cb4-6"><a href=""></a>  ),</span>
+<span id="cb4-7"><a href=""></a>  <span class="at">usage_limits =</span> <span class="fu">UsageLimits</span>(<span class="at">max_requests =</span> <span class="dv">6</span>)</span>
+<span id="cb4-8"><a href=""></a>)</span>
+<span id="cb4-9"><a href=""></a>result <span class="ot">&lt;-</span> agent<span class="sc">$</span><span class="fu">run_sync</span>(question)</span></code></pre></div>
 <div class="example-takeaway">
 “What does this article demonstrate, and what is still unresolved?”
 </div>
 <aside class="notes">
 <p>Now I give the agent a job. Same ellmer chat client, same read_article tool. The question is about the article we just read.</p>
-<p>Ellmer already supports tool calling. Deputy adds a managed run: permissions, hooks, usage limits, and an inspectable result. Here it gets a read-only policy that explicitly allows the article tool, and a limit of six model requests. The allowlist matters. A read-only annotation alone does not authorize a custom tool.</p>
-<p>The result holds the response, tool activity, usage, and why the run stopped. Ordinary R objects I can inspect.</p>
+<p>Advance: ellmer already supports tool calling. Deputy adds a managed run: permissions, hooks, usage limits, and an inspectable result. Here it gets a read-only policy that explicitly allows the article tool, and a limit of six model requests. The allowlist matters. A read-only annotation alone does not authorize a custom tool.</p>
+<p>Advance: the result holds the response, tool activity, usage, and why the run stopped. Ordinary R objects I can inspect.</p>
 <p>Orientation is the same kind of run. That is the task I said I would come back to.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
