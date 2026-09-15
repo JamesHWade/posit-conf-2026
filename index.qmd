@@ -582,7 +582,7 @@ Sources: https://github.com/tidyverse/ellmer/blob/92cfa7f48270048105ea1bfb44d23a
 <img class="example-hex" src="assets/hex/deputy.png" alt="Deputy hex sticker">
 </div>
 
-```{.r code-line-numbers="|4-7|9"}
+```{.r code-line-numbers="|4-7"}
 agent <- Agent$new(
   chat = chat,
   tools = list(read_article),
@@ -601,7 +601,7 @@ Now I give the agent a job. Same ellmer chat client, same read_article tool. The
 
 Advance: ellmer already supports tool calling. Deputy adds a managed run: permissions, hooks, usage limits, and an inspectable result. Here it gets a read-only policy that explicitly allows the article tool, and a limit of six model requests. The allowlist matters. A read-only annotation alone does not authorize a custom tool.
 
-Advance: the result holds the response, tool activity, usage, and why the run stopped. Ordinary R objects I can inspect.
+The result holds the response, tool activity, usage, and why the run stopped. Ordinary R objects I can inspect.
 
 Orientation is the same kind of run. That is the task I said I would come back to.
 :::
