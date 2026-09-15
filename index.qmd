@@ -546,7 +546,7 @@ Sources: https://github.com/posit-dev/shinychat/blob/88f7625846b096b6e0b2f883589
 <img class="example-hex" src="assets/hex/ellmer.png" alt="ellmer hex sticker">
 </div>
 
-```r
+```{.r code-line-numbers="|5-7"}
 read_article <- tool(
   fun = function() article,
   name = "read_article",
@@ -566,7 +566,7 @@ The model sees the tool's name and description and can request it. The applicati
 
 Here the function reads an article. In your work it could query a database, run a model, or return a plot. Code you already know how to write and test becomes useful to an agent.
 
-The annotations mark this function read-only and closed to the outside world. It returns the prepared article and never fetches the URL. Metadata alone cannot make arbitrary code safe.
+Advance: the annotations mark this function read-only and closed to the outside world. It returns the prepared article and never fetches the URL. Metadata alone cannot make arbitrary code safe.
 :::
 
 <!-- reference notes (not shown in presenter view)

@@ -2403,3 +2403,18 @@ $hex: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 .closing-affiliation {
   margin-bottom: 12px;
 }
+
+// Line-highlighted code blocks: keep the highlight, drop the numbers so
+// they match the other code slides.
+.reveal pre.numberSource {
+  border-left: none;
+  margin-left: 0;
+}
+
+.reveal pre.numberSource code > span {
+  left: 0 !important; // the line-highlight plugin sets -2.1em after the theme loads
+}
+
+.reveal pre.numberSource code > span > a:first-child::before {
+  display: none;
+}
