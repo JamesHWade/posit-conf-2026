@@ -1,6 +1,6 @@
 # AI Agents Deserve R
 
-Slides and speaker notes for James Wade's talk at posit::conf(2026).
+Slides and speaker notes for James Wade's talk at posit::conf(2026). The rendered deck is at [jameshwade.github.io/posit-conf-2026](https://jameshwade.github.io/posit-conf-2026/).
 
 The argument: agents do not need the largest ecosystem. They need a coherent one. R already has the pieces, and when something is missing, a smaller map makes the gap visible enough to build.
 
@@ -30,3 +30,7 @@ The Rill slides are redrawn in HTML at slide scale so they project legibly. The 
 ## Artwork
 
 Hex stickers in [`assets/hex`](assets/hex) belong to their respective packages. The otter illustrations for Rill are in [`assets/demo/rill-otters-20260911`](assets/demo/rill-otters-20260911) with their generation notes. The Dow logo appears on the title and closing slides at the presenter's request and remains Dow's property; see [`assets/brand/README.md`](assets/brand/README.md).
+
+## License
+
+The deck source, styles, notes, and demo apps are released under the [MIT License](LICENSE). Package hex stickers and the Dow logo are excluded and remain the property of their owners.
