@@ -1,0 +1,155 @@
+{
+  "date": "2026-09-11",
+  "mode": "Built-in image_gen tool",
+  "scope": "The five otter illustrations used in the main deck",
+  "images": [
+    {
+      "key": "reader",
+      "source": "01-rill-reader.png",
+      "filename": "01-rill-reader-transparent.png",
+      "generated_path": "(local generation cache, not included)",
+      "prompt": "Use case: background-extraction. Edit target: the supplied otter illustration for a presentation slide. Remove only the opaque warm paper background and export a PNG with real transparent alpha outside the illustration. Preserve the existing otter, open cream booklet, teal water ripples, dark outlines, whiskers, colors, shape, scale, pose, placement, and all foreground detail. Preserve the square canvas and generous margin. Keep the cream muzzle, chest and book pages opaque. Remove background in the gaps between whiskers and ripples too. Do not redraw, restyle, add or remove foreground details. No checkerboard pixels, no white or colored matte, no new shadow, no border, no text. The background must actually be transparent, not an image of transparency.",
+      "slide": "demo",
+      "title": "Rill",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_fraction": 0.622458,
+      "alpha_at_least_250_fraction": 0.349993,
+      "source_sha256": "7f1ca2fc42f0d28c372960c6b7b8abcab222518a652580fa7baa83471a7dbf3d",
+      "sha256": "f34a96fce0ecfcbb6d11faa4b26b1cfaf7566daf2201d159e9523af5607cebe9"
+    },
+    {
+      "key": "orientation",
+      "source": "02-orientation-choices.png",
+      "filename": "02-orientation-choices-transparent.png",
+      "generated_path": "(local generation cache, not included)",
+      "prompt": "Remove the background from this existing illustration. Return the same foreground artwork as a transparent PNG cutout with a real alpha channel. Preserve the otter and all its props exactly. Keep the cream muzzle, chest, book and paper areas opaque. Remove the background only. Do not draw a checkerboard or replace the background with another color.",
+      "slide": "demo-orientation",
+      "title": "Orientation",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_fraction": 0.473122,
+      "alpha_at_least_250_fraction": 0.510657,
+      "source_sha256": "3cb0cda939789196dc92fe1cb949cbb3c0d69fd83c71e60e32fe3bbbdb16a120",
+      "sha256": "0582d9145c9f15b624c888ec0a4bb2e23a08e5e9a02e58e5e1e7b085d6cce9a8"
+    },
+    {
+      "key": "evidence",
+      "source": "03-source-evidence.png",
+      "filename": "03-source-evidence-transparent.png",
+      "generated_path": "(local generation cache, not included)",
+      "prompt": "Use case: background-extraction. Edit target: this exact otter illustration. Remove its background to genuine transparency. Export an RGBA PNG whose empty background has alpha 0 and whose otter, book, ribbon, highlight, and held note remain opaque. Preserve the original artwork, pose, dimensions, scale, position and margins. This is background removal only. Previous attempts incorrectly painted gray-and-white squares; that is not transparency. Do not draw any checkerboard, paper, color or scene behind the otter. Keep the cream-colored muzzle, chest, book pages and note intact.",
+      "slide": "demo-evidence",
+      "title": "A reason to read it",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_fraction": 0.583852,
+      "alpha_at_least_250_fraction": 0.404594,
+      "source_sha256": "a39248220caf4790e04bc62ee36aa8e4bf1b77b067984f838e4c70e891b386a0",
+      "sha256": "0367ee3be16598b46c04766bc3e7c4a7a63fbca91f3c91cb8d866fe4a034be95"
+    },
+    {
+      "key": "feedback",
+      "source": "04-reader-feedback.png",
+      "filename": "04-reader-feedback-transparent.png",
+      "generated_path": "(local generation cache, not included)",
+      "prompt": "Remove the background from this existing illustration. Return the same foreground artwork as a transparent PNG cutout with a real alpha channel. Preserve the otter and all its props exactly. Keep the cream muzzle, chest, book and paper areas opaque. Remove the background only. Do not draw a checkerboard or replace the background with another color.",
+      "slide": "demo-review",
+      "title": "Was this Orientation useful?",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_fraction": 0.605242,
+      "alpha_at_least_250_fraction": 0.380037,
+      "source_sha256": "48896c57e3c4d3b306b43cddcacf797da0b02bb35a1b8c23a925c424d4d195ad",
+      "sha256": "635205ecfdde151e26a4899138cde9ae8588d40c5fabdc24508a79ea7b55c879"
+    },
+    {
+      "key": "question",
+      "source": "05-question-while-reading.png",
+      "filename": "05-question-while-reading-transparent.png",
+      "generated_path": "(local generation cache, not included)",
+      "prompt": "Use case: background-extraction. Edit target: the supplied otter illustration used on a conference slide. Remove only the opaque warm paper background and its ground shadow, and export a PNG with real transparent alpha outside the illustration. Preserve the otter with one raised paw and a curious expression, the open cream book, teal ribbon bookmark, and every foreground detail. Preserve the existing character exactly: facial expression, pose, body and tail shape, dark outlines, whiskers, fur and muzzle colors, composition, scale, placement, square canvas and margins. Keep all cream-colored foreground areas such as muzzle, chest and pages opaque. Remove background in internal gaps as well. Do not redraw, restyle, change any foreground object, add a shadow, add a border, or add any text. No checkerboard pixels and no white or colored matte; actual transparent alpha is required.",
+      "slide": "demo-ask",
+      "title": "Questions while reading",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_fraction": 0.618103,
+      "alpha_at_least_250_fraction": 0.370452,
+      "source_sha256": "b8dd8d29a68bcb612bf831f5c60507e1d012ebc731067f73176c36b186cedb3e",
+      "sha256": "6d43dfa6824c247f8d02cf8370b73a5a4810c9bedc89522866fd7816db602903"
+    }
+  ],
+  "browser_validation": {
+    "slides": 30,
+    "otter_slides_checked": [
+      "demo",
+      "demo-orientation",
+      "demo-evidence",
+      "demo-review",
+      "demo-ask"
+    ],
+    "missing_images": [],
+    "image_files_checked": 57,
+    "backgrounds_checked": [
+      "Paper",
+      "White",
+      "Dark"
+    ],
+    "page_errors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "source": "826c799994c32611629236bbc73516dbc14ff2ab",
+  "errors": [],
+  "alignment": [
+    {
+      "state": "empty",
+      "verticalCenterOffset": 0.25
+    },
+    {
+      "state": "ready",
+      "verticalCenterOffset": 0.25
+    },
+    {
+      "state": "stop",
+      "verticalCenterOffset": 0.25
+    }
+  ],
+  "historySearchCount": 1,
+  "branchesVerified": true,
+  "drawerReactiveUpdateVerified": true
+}

@@ -1,0 +1,14 @@
+.DS_Store
+.quarto/
+*_cache/
+
+# Private working material stays local
+coaching/
+notes/demo-recommendation.md
+notes/final-stretch-plan.md
+notes/talk-outline.md
+
+.claude/
+
+# Presentation PDF fallback, regenerated from index.html on demand
+index-backup.pdf
