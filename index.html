@@ -97,7 +97,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-c1360694d056498123093d0f69f88180.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-147f9f42986515b477c22ae967fe4803.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -856,14 +856,14 @@ The agent asks to call an R function
 </h3>
 <p><img class="example-hex" src="assets/hex/ellmer.png" alt="ellmer hex sticker"></p>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a>read_article <span class="ot">&lt;-</span> <span class="fu">tool</span>(</span>
-<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">fun =</span> <span class="cf">function</span>() article,</span>
-<span id="cb3-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">"read_article"</span>,</span>
-<span id="cb3-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="st">"Read this article and its source."</span>,</span>
-<span id="cb3-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">annotations =</span> <span class="fu">tool_annotations</span>(</span>
-<span id="cb3-6"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">read_only_hint =</span> <span class="cn">TRUE</span>, <span class="at">open_world_hint =</span> <span class="cn">FALSE</span></span>
-<span id="cb3-7"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb3-8"><a href="" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb3" data-code-line-numbers="|5-7"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>read_article <span class="ot">&lt;-</span> <span class="fu">tool</span>(</span>
+<span id="cb3-2"><a href=""></a>  <span class="at">fun =</span> <span class="cf">function</span>() article,</span>
+<span id="cb3-3"><a href=""></a>  <span class="at">name =</span> <span class="st">"read_article"</span>,</span>
+<span id="cb3-4"><a href=""></a>  <span class="at">description =</span> <span class="st">"Read this article and its source."</span>,</span>
+<span id="cb3-5"><a href=""></a>  <span class="at">annotations =</span> <span class="fu">tool_annotations</span>(</span>
+<span id="cb3-6"><a href=""></a>    <span class="at">read_only_hint =</span> <span class="cn">TRUE</span>, <span class="at">open_world_hint =</span> <span class="cn">FALSE</span></span>
+<span id="cb3-7"><a href=""></a>  )</span>
+<span id="cb3-8"><a href=""></a>)</span></code></pre></div>
 <div class="example-takeaway">
 Your existing R code becomes a capability the agent can use.
 </div>
@@ -871,7 +871,7 @@ Your existing R code becomes a capability the agent can use.
 <p>When the agent opened the article, it asked the application to call an R function. This uses ellmer, with the article text and source already prepared by the application.</p>
 <p>The model sees the tool’s name and description and can request it. The application runs the function and returns the result.</p>
 <p>Here the function reads an article. In your work it could query a database, run a model, or return a plot. Code you already know how to write and test becomes useful to an agent.</p>
-<p>The annotations mark this function read-only and closed to the outside world. It returns the prepared article and never fetches the URL. Metadata alone cannot make arbitrary code safe.</p>
+<p>Advance: the annotations mark this function read-only and closed to the outside world. It returns the prepared article and never fetches the URL. Metadata alone cannot make arbitrary code safe.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
