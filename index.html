@@ -979,7 +979,7 @@ Improving the Orientation program
 </div>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a>candidate <span class="ot">&lt;-</span> <span class="fu">compile</span>(</span>
 <span id="cb6-2"><a href="" aria-hidden="true" tabindex="-1"></a>  orient,</span>
-<span id="cb6-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">MIPROv2</span>(<span class="at">metric =</span> score_orientation),</span>
+<span id="cb6-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">GEPA</span>(<span class="at">metric =</span> score_orientation),</span>
 <span id="cb6-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">trainset =</span> examples,</span>
 <span id="cb6-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">valset =</span> validation,</span>
 <span id="cb6-6"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">.llm =</span> chat</span>
@@ -988,8 +988,8 @@ Improving the Orientation program
 Compare with the original on unread sets kept out of optimization.
 </div>
 <aside class="notes">
-<p>MIPROv2 searches over instructions and demonstrations. I supply examples and the metric that defines a better Orientation.</p>
-<p>I care whether the choices help me decide what to read and whether the reasons are supported by their sources. Quotes and document IDs can be checked in code. Usefulness needs a rubric informed by reader judgments. My score_orientation function would combine those. It is application code, not a built-in metric.</p>
+<p>GEPA looks at the examples it got wrong, reads the feedback from my metric, and proposes better instructions. I supply the examples and the metric that defines a better Orientation.</p>
+<p>I care whether the choices help me decide what to read and whether the reasons are supported by their sources. Quotes and document IDs can be checked in code. Usefulness needs a rubric informed by reader judgments, like the reason I typed on the feedback slide. My score_orientation function would combine those and return a score with a short reason. It is application code, not a built-in metric.</p>
 <p>This is the workflow I want around Orientation. The app already retains feedback. Assembling the evaluation data and running the comparison are further work, so there are no before-and-after scores to claim.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1005,9 +1005,9 @@ Compare with the original on unread sets kept out of optimization.
 <!-- reference notes (not shown in presenter view)
 The examples and validation set guide the search. Then I compare the candidate and the original on another set that the optimizer never saw. I would keep a change only if it improves that comparison, with acceptable cost and latency.
 
-The code assumes the orient module from the previous slide, an ellmer chat client, curated examples and validation data, and a numeric score_orientation(prediction, row) function. Evaluation uses evaluate(orient, testset, metric = score_orientation, .llm = chat), then the same call with candidate.
+The code assumes the orient module from the previous slide, an ellmer chat client, curated examples and validation data, and a score_orientation(prediction, row) function built with metric_with_feedback(), returning list(score = , feedback = ) so GEPA can use the feedback text in its reflection step. Evaluation uses evaluate(orient, testset, metric = score_orientation, .llm = chat), then the same call with candidate.
 
-Sources: https://github.com/JamesHWade/dsprrr/blob/76a014f74e8d4a236aa0a0c5dda87de388310cf6/R/compile.R, R/teleprompter-mipro.R, R/evaluate.R, and vignettes/tutorial-optimize-your-module.Rmd at the same revision. compile() takes the program first and the optimizer second. Development APIs checked September 13, 2026.
+Sources: https://github.com/JamesHWade/dsprrr/blob/76a014f74e8d4a236aa0a0c5dda87de388310cf6/R/compile.R, R/teleprompter-gepa.R, R/evaluate.R, and vignettes/advanced-optimization.Rmd (single-objective GEPA example) at the same revision. compile() takes the program first and the optimizer second. GEPA(metric = ) is the single-objective form; metric_with_feedback() is documented in the GEPA roxygen. Development APIs checked September 13, 2026; GEPA export confirmed September 15, 2026.
 -->
 </section>
 <section id="staying-in-r" class="slide level2 gap-slide cohesion-slide">
